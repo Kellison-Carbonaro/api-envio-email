@@ -25,7 +25,7 @@ Esta API permite o envio de e-mails utilizando o Nodemailer e o Mailtrap.
 
 ## Configuração do Ambiente
 
-A API utiliza variáveis de ambiente para configurar o Mailtrap e outras informações sensíveis. Para isso, crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+A API utiliza variáveis de ambiente para configurar o Mailtrap e outras informações sensíveis. Para isso, crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo e altera para os seus dados:
 
 ```env
 HOSTMAILTRAP=smtp.mailtrap.io
