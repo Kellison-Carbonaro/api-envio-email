@@ -10,12 +10,18 @@ describe('sendEmailNodemailer', () => {
       sendMail: sendMailMock,
     });
 
-    const result = await sendEmailNodemailer();
+    const emailData = {
+      to: 'teste@teste.com',
+      subject: 'Assunto do e-mail',
+      text: 'Conteúdo do e-mail',
+    };
+
+    const result = await sendEmailNodemailer(emailData);
 
     expect(sendMailMock).toHaveBeenCalledWith({
-      from: '"Pessoa Teste" <pessoa@teste.com>',
       to: 'teste@teste.com',
-      subject: 'email com nodemailer',
+      subject: 'Assunto do e-mail',
+      text: 'Conteúdo do e-mail',
     });
 
     expect(result).toEqual({
