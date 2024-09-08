@@ -2,8 +2,10 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const sendEmailRoutes = require('./routes/sendEmailRoutes');
+const swaggerConfig = require('./swagger');
 
 
+swaggerConfig(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
